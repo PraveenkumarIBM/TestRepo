@@ -23,10 +23,9 @@ steps:
        addToPath: true         
       
     - script:
-       python -m pip install --upgrade.pip
        pip install selenium
-       pip install behave
-       behave features/Login.feature 
+       pip install pytest
+       pytest -v -s .\testCases\CI\Sanity\test_TC08_VerifyTopFilterFunctionality.py
        
           
           
