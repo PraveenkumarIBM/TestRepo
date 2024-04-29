@@ -9,7 +9,7 @@ schedules:
 - cron: "10 00 * * 2-6"  # Run the task every day at 7PM CST
   branches:
     include:
-    - Fortitude-DownloadingReports-1to20
+    - S2P-Automation-Demo
   always: true
 
 
@@ -17,74 +17,21 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-    - task: CmdLine@2
-      displayName: npm Version
+    - task: UsePythonVersion@0
       inputs:
-        script: npm install -g @vue/cli
-
-    - task: CmdLine@2
-      displayName: npm Version
-      inputs:
-        script: npm -v
-    
-    - task: NodeTool@0
-      inputs:
-        versionSource: 'spec'
-        versionSpec: '16.16'
-    - task: CmdLine@2
-      displayName: Node Version
-      inputs:
-        script: node -v   
+       versionSpec: '3.9'
+       addToPath: true         
+      
+    - script:
+       python -m pip install --upgrade.pip
+       pip install selenium
+       pip install behave
 
     - task: Bash@3
       inputs:
         targetType: 'inline'
         script: |
-          set -x
-          echo $(Build.SourcesDirectory)
-          ls -ltr
-          chmod +x Send_Email.sh
-          chmod +x Data_Upload.sh
-          sudo apt-get update
-          sudo apt install wget -yq
-          sudo apt-get install openjdk-11-jdk -y
-          sudo apt-get install python3 python3-pip -y
-          pip3 install pysftp
-          npm update
-          npm fund
-          npm install -g protractor
-          npm install -g jasmine-allure-reporter
-          npm install -g allure-commandline
-          wget --no-verbose -O /tmp/chrome.deb https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_114.0.5735.90-1_amd64.deb
-          sudo  apt install -y /tmp/chrome.deb --allow-downgrades
-          cd /tmp
-          rm /tmp/chrome.deb
-          cd ..
-          cd /etc/apt/sources.list.d/
-          ls -ltr
-          sudo npm install -g npm
-          sudo npm cache clear
-          npm cache clear
-          webdriver-manager update
-          webdriver-manager start --detach
-          allure --version
-          chmod -R 777 ./
-          cd
-          cd /home/vsts/work/1/s
-          ls -ltr
-          protractor config.js --params.env.name PRODUCTION
+          behave features/Login.feature 
           
-          #cd ..
-          allure generate allure-results
-          cd allure-results && ls && pwd
-          cd ../allure-report && ls
-          #wget https://repo1.maven.org/maven2/io/qameta/allure/allure-commandline/2.15.0/allure-commandline-2.15.0.zip
-    # - task: AllureGenerate@1
-    #   inputs:
-    #     resultsDir: 'allure-results'
-    #     targetDir: 'allure-report/$(Build.BuildNumber)'
-    - task: PublishAllureReport@1
-      inputs:
-        reportDir: 'allure-report'
           
 
