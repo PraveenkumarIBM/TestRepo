@@ -1,0 +1,7 @@
+[32mINFO    [0m root:conftest.py:17 Browser is initiated
+[32mINFO    [0m root:conftest.py:29 Microsoft authenticator step is initiated...
+[32mINFO    [0m root:conftest.py:32 Microsoft value is entered...
+[32mINFO    [0m root:conftest.py:48 Successfully landing into content inteliigence page..
+[32mINFO    [0m root:LoginPageVerification.py:13 Login page verification
+[32mINFO    [0m root:LoginPageVerification.py:18 ******Verify the title of home page***********
+[32mINFO    [0m root:LoginPageVerification.py:19 Title of home page is Content Intelligence
