@@ -25,8 +25,7 @@ steps:
     - script:
        pip install selenium
        pip install pytest
-       pip install -r requirements.txt
- 
+
     
     - script: 
         pytest -v -s .\testCases\CI\Sanity\test_TC08_VerifyTopFilterFunctionality.py
