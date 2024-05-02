@@ -30,7 +30,7 @@ class BaseTest:
     pass
 
 
-logger = LogGen.loggen()
+#logger = LogGen.loggen()
 
 
 class Test_VerifyE2EFunctionalityforINVPO(BaseTest):
