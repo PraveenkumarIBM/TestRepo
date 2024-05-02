@@ -16,10 +16,10 @@ Sheet = workbook.get_sheet_by_name('Login')
 #import logging
 #logging.basicConfig(filename="automation.log",format='%(asctime)s - %(levelname)s - %(message)s',datefmt='%d-%b-%y %H:%M:%S',
 #                   level=logging.INFO)
-logger=LogGen.loggen()
+#logger=LogGen.loggen()
 @pytest.fixture(params=["chrome"],scope='class')
 def init_driver(request):
-    logger.info("Browser is initiated")
+    #logger.info("Browser is initiated")
     #Driver Initialization
     if request.param =="chrome":
         web_driver=webdriver.Chrome(options=options)
@@ -32,10 +32,10 @@ def init_driver(request):
     #Entering microsoft ID and Password
     driver = web_driver
     login = Login(driver)
-    logger.info("Microsoft authenticator step is initiated...")
+    #logger.info("Microsoft authenticator step is initiated...")
     login.enter_email(Sheet['B2'].value)
     print('Microsoft value is entered')
-    logger.info("Microsoft value is entered...")
+    #logger.info("Microsoft value is entered...")
     login.click_next()
     time.sleep(7)
     #click on w3 credentials link & enter w3 user name and password
@@ -52,4 +52,4 @@ def init_driver(request):
     time.sleep(25)
     login.click_staysignedin()
     time.sleep(10)
-    logger.info("Successfully landing into content inteliigence page..")
+    #logger.info("Successfully landing into content inteliigence page..")
