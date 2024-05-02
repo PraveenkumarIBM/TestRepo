@@ -7,6 +7,9 @@ from allure_commons.types import AttachmentType
 import pageObjects
 from pageObjects.Login import Login
 from utilities.customlogger import LogGen
+from selenium.webdriver.chrome.options import Options
+options = webdriver.ChromeOptions()
+options.add_argument('--headless')
 path = "./testData/Login_Amway_NewUI.xlsx"
 workbook = openpyxl.load_workbook(path)
 Sheet = workbook.get_sheet_by_name('Login')
@@ -19,7 +22,7 @@ def init_driver(request):
     logger.info("Browser is initiated")
     #Driver Initialization
     if request.param =="chrome":
-        web_driver=webdriver.Chrome()
+        web_driver=webdriver.Chrome(options=options)
     request.cls.driver = web_driver
     #maximize and open the application
     web_driver.maximize_window()
