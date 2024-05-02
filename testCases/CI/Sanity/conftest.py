@@ -28,7 +28,7 @@ def init_driver(request):
     web_driver.maximize_window()
     web_driver.get(Sheet['A2'].value)
     time.sleep(10)
-    allure.attach(request.driver.get_screenshot_as_png(), name="Microsoft Login Page Page", attachment_type=AttachmentType.PNG)
+    #allure.attach(request.driver.get_screenshot_as_png(), name="Microsoft Login Page Page", attachment_type=AttachmentType.PNG)
     #Entering microsoft ID and Password
     driver = web_driver
     login = Login(driver)
@@ -41,7 +41,7 @@ def init_driver(request):
     #click on w3 credentials link & enter w3 user name and password
     login.click_w3credentails()
     time.sleep(3)
-    allure.attach(request.driver.get_screenshot_as_png(), name="W3 Credentials Page", attachment_type=AttachmentType.PNG)
+    #allure.attach(request.driver.get_screenshot_as_png(), name="W3 Credentials Page", attachment_type=AttachmentType.PNG)
     login.enter_w3username(Sheet['B2'].value)
     print('Entered w3 mail id...')
     login.enter_w3password(Sheet['C2'].value)
