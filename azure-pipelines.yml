@@ -26,8 +26,9 @@ steps:
        pip install selenium
        pip install pytest
        pip install -r requirements.txt
-       pip install -e .
        pip install openpyxl
+       pip install -e .
+
 
     - script:
        pytest ./testCases/CI/Sanity/test_TC02_VerifyE2EFunctionalityForPODocumentType.py

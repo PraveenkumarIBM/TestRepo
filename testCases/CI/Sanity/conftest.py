@@ -6,7 +6,7 @@ import allure
 from allure_commons.types import AttachmentType
 import pageObjects
 from pageObjects.Login import Login
-from utilities.customlogger import LogGen
+#from utilities.customlogger import LogGen
 from selenium.webdriver.chrome.options import Options
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')

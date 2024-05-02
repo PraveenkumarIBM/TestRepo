@@ -14,7 +14,7 @@ from Functions.InvoiceSearchClick import InvoiceSearchClick
 from pageObjects.LineSection import line_section
 from pageObjects.HeaderSection import header_section
 from selenium.webdriver.common.keys import Keys
-from utilities.customlogger import LogGen
+#from utilities.customlogger import LogGen
 from pynput.keyboard import Controller, Key
 import openpyxl
 
