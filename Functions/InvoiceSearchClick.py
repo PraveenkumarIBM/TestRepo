@@ -7,7 +7,7 @@ from pageObjects.LineSection import line_section
 from utilities.customlogger import LogGen
 import openpyxl
 
-path = "C:\\Users\\PraveenKumar187\\Documents\\S2P\\Automation\\Content Intelligence\\Pytest\\testData\\Login_Amway_NewUI.xlsx"
+path = "./testData/Login_Amway_NewUI.xlsx"
 workbook = openpyxl.load_workbook(path)
 Login = workbook.get_sheet_by_name('Login')
 
