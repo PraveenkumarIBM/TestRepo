@@ -27,6 +27,8 @@ steps:
        pip install pytest
        pip install -r requirements.txt
        pip install -e .
+       pip install openpyxl
+
     - script:
        pytest ./testCases/CI/Sanity/test_TC02_VerifyE2EFunctionalityForPODocumentType.py
        
