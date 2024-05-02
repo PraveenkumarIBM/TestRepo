@@ -15,9 +15,8 @@ from pageObjects.LineSection import line_section
 from pageObjects.HeaderSection import header_section
 from selenium.webdriver.common.keys import Keys
 #from utilities.customlogger import LogGen
-from pynput.keyboard import Controller, Key
+#from pynput.keyboard import Controller, Key
 import openpyxl
-
 path = "./testData/Login_Amway_NewUI.xlsx"
 workbook = openpyxl.load_workbook(path)
 Login = workbook.get_sheet_by_name('Login')
