@@ -29,11 +29,10 @@ class BaseTest:
     pass
 
 
-logger = LogGen.loggen()
+#logger = LogGen.loggen()
 
 
 class Test_VerifyE2EFunctionalityforINVPO(BaseTest):
-
     def test_TC01_documentprocessing_for_pdf_with_doctype_invpo(self):
         print("hello pytest")
         #Login verification
@@ -51,6 +50,9 @@ class Test_VerifyE2EFunctionalityforINVPO(BaseTest):
         # # veify the invoice completed status verification
         # invoicevalidation = InvoiceValidation(self.driver)
         # invoicevalidation.test_invoice_validation()
+
+
+
 
 
 
