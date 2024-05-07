@@ -50,6 +50,6 @@ def init_driver(request):
     time.sleep(3)
     login.click_w3signin()
     time.sleep(25)
-    login.click_staysignedin()
-    time.sleep(10)
+    #login.click_staysignedin()
+    #time.sleep(10)
     #logger.info("Successfully landing into content inteliigence page..")
