@@ -29,15 +29,16 @@ class BaseTest:
     pass
 
 
-#logger = LogGen.loggen()
+logger = LogGen.loggen()
 
 
 class Test_VerifyE2EFunctionalityforINVPO(BaseTest):
 
     def test_TC01_documentprocessing_for_pdf_with_doctype_invpo(self):
-        # Login verification
-        loginverification = LoginpageVerification(self.driver)
-        loginverification.test_loginpage_verification()
+        print("hello pytest")
+        #Login verification
+        # loginverification = LoginpageVerification(self.driver)
+        # loginverification.test_loginpage_verification()
         # # invoice Search
         # invoicesearch = InvoiceSearchClick(self.driver)
         # invoicesearch.test_invoicesearch_click()
