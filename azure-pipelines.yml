@@ -39,7 +39,6 @@ steps:
        cd allure-results && ls && pwd
        cd ../allure-report && ls
 
-    - task: PublishAllureReport@1
       inputs:
           reportDir: 'allure-report'
 
