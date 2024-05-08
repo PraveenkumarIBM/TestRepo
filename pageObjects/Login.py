@@ -3,6 +3,7 @@ class Login:
     def __init__(self,driver):
         self.driver = driver
         self.email = "//input[@type='email']"
+        self.password ="//input[@type='password']"
         self.next ="//input[@type='submit']"
         self.w3credentails ="//label[contains(text(),'Use your w3id and password')]"
         self.w3username="//input[@name='username']"
@@ -11,6 +12,9 @@ class Login:
         self.W3staysignedYesNo = "//input[@type='submit']"
     def enter_email(self,email):
         self.driver.find_element(By.XPATH,self.email).send_keys(email)
+
+    def enter_password(self,password):
+        self.driver.find_element(By.XPATH,self.password).send_keys(password)
 
     def click_next(self):
         self.driver.find_element(By.XPATH,self.next).click()
