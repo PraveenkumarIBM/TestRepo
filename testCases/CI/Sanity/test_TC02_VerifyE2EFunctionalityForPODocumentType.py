@@ -44,12 +44,12 @@ class Test_VerifyE2EFunctionalityforINVPO(BaseTest):
         # Verify the KVP section
         kvpseaction = KvpSection(self.driver)
         kvpseaction.test_kvp_section()
-        # #verify the line section
-        # linesection = LineSection(self.driver)
-        # linesection.test_line_section()
-        # # veify the invoice completed status verification
-        # invoicevalidation = InvoiceValidation(self.driver)
-        # invoicevalidation.test_invoice_validation()
+        #verify the line section
+        linesection = LineSection(self.driver)
+        linesection.test_line_section()
+        # veify the invoice completed status verification
+        invoicevalidation = InvoiceValidation(self.driver)
+        invoicevalidation.test_invoice_validation()
 
 
 
