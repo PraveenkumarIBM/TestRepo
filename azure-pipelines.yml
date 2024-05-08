@@ -34,8 +34,15 @@ steps:
 
 
     - script:
-       pytest -v -s --alluredir="./Reports/" ./testCases/CI/Sanity/test_TC02_VerifyE2EFunctionalityForPODocumentType.py
-       
+       pytest -v -s --alluredir="./allure-results/" ./testCases/CI/Sanity/test_TC02_VerifyE2EFunctionalityForPODocumentType.py
+       allure generate allure-results
+       cd allure-results && ls && pwd
+       cd ../allure-report && ls
+
+    - task: PublishAllureReport@1
+      inputs:
+          reportDir: 'allure-report'
+
 
 
    
