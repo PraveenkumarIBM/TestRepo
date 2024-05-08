@@ -30,12 +30,13 @@ steps:
        pip install pynput
        pip install -e .
        pip install allure-pytest
+       pip install allure-python-commons
 
 
 
     - script:
-       pytest -v -s --alluredir="./Reports/" ./testCases/CI/Sanity/test_TC02_VerifyE2EFunctionalityForPODocumentType.py
-       cd ./Reports/
+       pytest -v -s --alluredir="./allure-results/" ./testCases/CI/Sanity/test_TC02_VerifyE2EFunctionalityForPODocumentType.py
+       
 
 
 
