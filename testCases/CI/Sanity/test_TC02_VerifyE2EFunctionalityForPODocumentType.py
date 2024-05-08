@@ -38,9 +38,9 @@ class Test_VerifyE2EFunctionalityforINVPO(BaseTest):
         #Login verification
         loginverification = LoginpageVerification(self.driver)
         loginverification.test_loginpage_verification()
-        # # invoice Search
-        # invoicesearch = InvoiceSearchClick(self.driver)
-        # invoicesearch.test_invoicesearch_click()
+        # invoice Search
+        invoicesearch = InvoiceSearchClick(self.driver)
+        invoicesearch.test_invoicesearch_click()
         # # Verify the KVP section
         # kvpseaction = KvpSection(self.driver)
         # kvpseaction.test_kvp_section()
