@@ -10,7 +10,7 @@ from pageObjects.HeaderSection import header_section
 from pageObjects.LineSection import line_section
 from utilities.customlogger import LogGen
 import openpyxl
-path = "./testData/Login_Amway_NewUI_azure.xlsx"
+path = "./testData/Login_Amway_NewUI.xlsx"
 workbook = openpyxl.load_workbook(path)
 Header = workbook.get_sheet_by_name('Header_GB')
 logger = LogGen.loggen()
