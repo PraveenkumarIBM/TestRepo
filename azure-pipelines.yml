@@ -39,8 +39,7 @@ steps:
        cd allure-results && ls && pwd
        cd ../allure-report && ls
 
-      inputs:
-          reportDir: 'allure-report'
+      reportDir: 'allure-report'
 
 
 
