@@ -41,9 +41,9 @@ class Test_VerifyE2EFunctionalityforINVPO(BaseTest):
         # invoice Search
         invoicesearch = InvoiceSearchClick(self.driver)
         invoicesearch.test_invoicesearch_click()
-        # # Verify the KVP section
-        # kvpseaction = KvpSection(self.driver)
-        # kvpseaction.test_kvp_section()
+        # Verify the KVP section
+        kvpseaction = KvpSection(self.driver)
+        kvpseaction.test_kvp_section()
         # #verify the line section
         # linesection = LineSection(self.driver)
         # linesection.test_line_section()
