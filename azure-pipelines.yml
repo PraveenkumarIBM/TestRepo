@@ -35,7 +35,7 @@ steps:
 
     - script:
        pytest -v -s --alluredir="./Reports/" ./testCases/CI/Sanity/test_TC02_VerifyE2EFunctionalityForPODocumentType.py
-       allure serve ./Reports/
+       cd ./Reports/
 
 
 
