@@ -29,10 +29,12 @@ steps:
        pip install openpyxl
        pip install pynput
        pip install -e .
+       pip install allure-pytest
+
 
 
     - script:
-       pytest ./testCases/CI/Sanity/test_TC02_VerifyE2EFunctionalityForPODocumentType.py
+       pytest -v -s --alluredir="./Reports/" ./testCases/CI/Sanity/test_TC02_VerifyE2EFunctionalityForPODocumentType.py
        
 
 

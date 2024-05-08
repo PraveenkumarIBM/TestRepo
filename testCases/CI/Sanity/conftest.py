@@ -36,6 +36,7 @@ def init_driver(request):
     driver = web_driver
     login = Login(driver)
     logger.info("Microsoft authenticator step is initiated...")
+    #allure.attach(self.driver.get_screenshot_as_png(), name="Dashboard Page", attachment_type=AttachmentType.PNG)
     login.enter_email(Sheet['B2'].value)
     print('Microsoft value is entered')
     logger.info("Microsoft value is entered...")
