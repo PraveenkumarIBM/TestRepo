@@ -11,8 +11,7 @@ from utilities.customlogger import LogGen
 from pageObjects.Graphs import graphs
 import allure
 from allure_commons.types import AttachmentType
-#from Functions.ScreenshotFile import screenshotfile
-
+from Functions.ScreenshotFile import screenshotfile
 path = "./testData/Login_shrri.xlsx"
 workbook = openpyxl.load_workbook(path)
 Sheet = workbook.get_sheet_by_name('Login')
