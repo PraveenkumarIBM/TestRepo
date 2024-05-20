@@ -36,7 +36,9 @@ steps:
 
     - script:
        pytest -v -s --alluredir="./allure-results/" ./testCases/CI/Sanity/test_TC02_VerifyE2EFunctionalityForPODocumentType.py
-       
+
+    - script:
+        pytest -v -s --alluredir="./allure-results/" ./testCases/CI/Sanity/test_Completed.py
 
 
 
